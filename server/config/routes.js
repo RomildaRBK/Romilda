@@ -6,7 +6,9 @@ module.exports = function (app, express) {
 	 app.post('/api/signup', controller.signup);
 
 	 app.get('/api/friends',helpers.decode, controller.viewFriends);
-	 app.post('/api/friends', helpers.decode, controller.addFriend);
+	 app.post('/api/friends',helpers.decode, controller.viewFriend);
+
+	 //app.post('/api/friends', helpers.decode, controller.addFriend);
 	
 	 app.get('/api/notes', helpers.decode, controller.viewNotes);
 	 app.post('/api/notes', helpers.decode, controller.saveNote);
