@@ -50,8 +50,21 @@ angular.module('Memorize.services',[])
 			return resp.data;
 		});
 	}; 
+	
+	var getFriend=function(data){
+		return $http({
+			method:'POST',
+			url:'/api/friends',
+			data:data
+		})
+		.then(function(resp){
+			return resp.data;
+		})
+	};
+	
 	return{
-		getFriends : getFriends
+		getFriends : getFriends,
+		getFriend : getFriend
 	};
 })
 

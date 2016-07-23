@@ -110,6 +110,9 @@ module.exports = {
 			}
 		});
 	},
+	viewFriend:function(req,res,next){
+		
+	},
 	show:function(req,res,next){
 		var username=req.user.username;
 
